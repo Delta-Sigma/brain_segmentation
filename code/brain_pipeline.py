@@ -75,8 +75,7 @@ class BrainPipeline(object):
 
     def _normalize(self, slice):
         '''
-        INPUT:  (1) a single slice of any given modality (excluding gt)
-                (2) index of modality assoc with slice (0=flair, 1=t1, 2=t1c, 3=t2)
+        INPUT:  a single slice of any given modality (excluding gt)
         OUTPUT: normalized slice
         '''
         b, t = np.percentile(slice, (0.5,99.5))
