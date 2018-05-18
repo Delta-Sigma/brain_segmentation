@@ -143,9 +143,9 @@ def s3_dump(directory, bucket):
     '''
     dump files from a given directory to an s3 bucket
     INPUT   (1) string 'directory': directory containing files to save
-            (2) string 'bucket': name od s3 bucket to dump files
+            (2) string 'bucket': name of s3 bucket to dump files
     '''
-    subprocess.call('aws s3 cp' + ' ' + directory + ' ' + 's3://' + bucket + ' ' + '--recursive')
+    subprocess.call('aws s3 cp ' + directory + ' s3://' + bucket + ' --recursive')
 
 def save_labels(fns):
     '''
